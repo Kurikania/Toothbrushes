@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+body {
+    background-image: url("./img/bamboo-toothbrushes-soap-top-view.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    padding: 10px;
+    width: 90vw;
+    max-width: 1200px; 
+    margin-bottom: 30px;
+    margin-top: 80px;
+    background-color: rgba(225, 225, 225, 0.5)
+}
+
+.btn {
+	border-radius: 4px;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+	background-color: #691E06;
+    opacity: 1;
+    border: none; 
+    padding: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+.cart {
+    margin: 25px 100px;
+    border: 1px solid #d8d8d8;
+    padding: 10px 30px;
+    width: fit-content;
+    background-color: white;
+  }
+  
+  .color-box {
+      display: flex;
+  }
+
+  .color-circle {
+    width: 50px;
+    height: 50px;
+    margin-top: 8px;
+    border: 2px solid #d8d8d8;
+    border-radius: 50%;
+  }
+  
+  
+  .disabledButton {
+    background-color: #d8d8d8;
+    cursor: not-allowed;
+  }
+  
+  h1 {
+    font-size: 50px;
+  }
+  
+  h3 {
+    font-size: 25px;
+  }
+  
+  img {
+    box-shadow: 0px 0px 8px 12px rgba(255,255,255,1);;
+    width: 80%;
+    margin: 40px;
+  }
+  
+  input {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-size: 20px;
+    margin: 5px 0;
+  }
+  
+  li {
+    font-size: 18px;
+  }
+  
+  
+  .out-of-stock-img {
+    opacity:0.5
+  }
+  
+  p {
+    font-size: 22px;
+  }
+  
+  .product-display {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+  
+  .product-container {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+ 
+  
+  .order-form {
+    display: flex;
+    flex-direction: column;
+    width: 425px;
+    padding: 20px;
+    margin: 20px;
+    margin-left: 0;
+    border: 2px solid #d8d8d8;
+    background-color: white;
+  }
+  
+  
+  .order-form .button {
+    display: block;
+    margin: 10px auto;
+  }
+  
+  select {
+    height: 40px;
+    font-size: 20px;
+    background-color: white;
+    cursor: pointer;
+  }
+  
+  textarea {
+    width: 95%;
+    height: 70px;
+    padding: 10px;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+  
+ 
+
+  .product-image{
+    position: relative;
+    width: 40%;
+  }
+  
+  
+ #brushName {
+    text-transform: lowercase;
+    font-family: 'Lobster', cursive;
+    transform-origin: left;
+    position: absolute;
+    transform: rotate(-66deg);
+    top: 70%;
+    left: 31%;
+    font-size: 1.2vw;
+}
+  .trg {
+    display: block;
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+
+  .modal {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    z-index: 2;
+    top:55px;
+    left:10%;
+    right:10%;
+    bottom:55px;
+    box-shadow: 2px 0 1 1px black; 
+    padding: 30px;
+    background-color: rgb(255, 255, 255);
+    overflow: auto;
+}
+
+.container {
+  margin: auto;
+}
+
+
+@media only screen and (max-width: 950px) {
+  
+  main {
+    margin-top: 100px;
+  }
+  .container {
+    flex-direction: column;
+  }
+  .cart {
+    margin: 20px auto;
+  }
+  
+  .product-image,
+  .product-info {
+    
+    width: 80vw;
+  }
+
+  #brushName {
+    top: 70%;
+    left: 42%;
+  }
+
+  .order-form {
+    width: 90%;
+  }
+}
+
+@media only screen and (min-width: 640px) and (max-width: 950px) {
+  #brushName {
+      top: 73%;
+      left: 32%;
+  }
+  }
+  
+
+@media only screen and (min-width: 380px) and (max-width: 640px) {
+#brushName {
+    top: 73%;
+    left: 37%;
+}
+}
+
+
+@media only screen and (max-width: 380px)  {
+#brushName {
+ display: none;
+}
+}
