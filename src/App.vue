@@ -7,7 +7,7 @@
           <li><router-link to="/gallery">Gallery</router-link></li>
         </nav>
       </header>
-  <router-view Home> </router-view>
+  <router-view /> 
 </template>
 <script>
 export default {
