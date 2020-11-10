@@ -11,6 +11,8 @@ body {
 
 main {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 10px;
     width: 90vw;
     max-width: 1200px; 
@@ -66,11 +68,7 @@ main {
     font-size: 25px;
   }
   
-  img {
-    box-shadow: 0px 0px 8px 12px rgba(255,255,255,1);;
-    width: 80%;
-    margin: 40px;
-  }
+ 
   
   input {
     width: 100%;
@@ -95,22 +93,7 @@ main {
   p {
     font-size: 22px;
   }
-  
-  .product-display {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-  }
-  
-  .product-container {
-
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  
- 
-  
+   
   .order-form {
     display: flex;
     flex-direction: column;
@@ -146,13 +129,33 @@ main {
   ul {
     list-style-type: none;
   }
-  
- 
 
-  .product-image{
-    position: relative;
+  .product-display {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .product-information {
     width: 40%;
   }
+  
+  .product-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .product-image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 600px;
+    width: 400px;
+    position: relative;
+    margin: 20px;
+}
   
   
  #brushName {
@@ -162,8 +165,8 @@ main {
     position: absolute;
     transform: rotate(-66deg);
     top: 70%;
-    left: 31%;
-    font-size: 1.2vw;
+    left: 38%;
+    font-size: 100%;
 }
   .trg {
     display: block;
@@ -196,7 +199,6 @@ main {
   margin: auto;
 }
 
-
 @media only screen and (max-width: 950px) {
   
   main {
@@ -208,41 +210,46 @@ main {
   .cart {
     margin: 20px auto;
   }
-  
-  .product-image,
-  .product-info {
-    
-    width: 80vw;
-  }
-
-  #brushName {
-    top: 70%;
-    left: 42%;
-  }
 
   .order-form {
     width: 90%;
   }
+  .product-container {
+    flex-direction: column;
+  }
+  .product-information {
+    width: 100%;
+  }
 }
 
-@media only screen and (min-width: 640px) and (max-width: 950px) {
-  #brushName {
-      top: 73%;
-      left: 32%;
-  }
-  }
+/* 
+320px — 480px: Mobile devices.
+481px — 768px: iPads, Tablets.
+769px — 1024px: Small screens, laptops.
+1025px — 1200px: Desktops, large screens.
+1201px and more — Extra large screens, TV. 
+*/
   
 
-@media only screen and (min-width: 380px) and (max-width: 640px) {
-#brushName {
+
+
+@media only screen and (max-width: 480px)  {
+
+  main {
+    margin-top: 150px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+  .product-image {
+    height: 300px;
+    width: 200px;
+    margin: 10px;
+}
+  #brushName {
     top: 73%;
     left: 37%;
-}
-}
-
-
-@media only screen and (max-width: 380px)  {
-#brushName {
- display: none;
-}
+    font-size: 50%;
+  }
 }

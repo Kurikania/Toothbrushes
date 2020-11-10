@@ -3,8 +3,7 @@
 <div class="product-display">
   <main> 
     <div class="product-container">
-      <div class="product-image">
-        <img :src="imageToothbrush">
+      <div class="product-image"  v-bind:style="{ 'background-image': 'url(' + image + ')' }" >
         <div id="brushName" v-if= "orders.length>0"> {{ orders[orders.length-1].name }} </div>
       </div>
       <div class="product-info">
@@ -42,6 +41,7 @@
   </div>
 </template>
 <script>
+
 import OrderList from "./OrderList";
 import OrderForm from './OrderForm';
 export default {
@@ -83,7 +83,7 @@ export default {
       }
   },
   computed: {
-      imageToothbrush() {
+      image() {
           return this.variants[this.selectedVariant].image
       },
       inStock() {

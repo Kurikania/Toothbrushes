@@ -5,11 +5,12 @@
       <input id="name" v-model="name"> 
       <label for="colorPick">Pick a Color</label>
       <select id="colorPick" v-model.number="colorPick">
-      <option 
-        v-for="(variant) in variants" 
-        :key="variant.id" 
-      > {{ variant.color }}
-      </option>
+        <option 
+          v-for="(variant) in variants" 
+          :key="variant.id" 
+          @mouseover="updateVariant(index)" 
+        > {{ variant.color }}
+        </option>
       </select>
       <label for="qty">How many?</label>
       <input id="qty" v-model="qty" type="number">  
